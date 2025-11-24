@@ -5,7 +5,7 @@ module.exports = {
   async getCozinha(req, res) {
     const pedidosCozinha = await ItemPedido.findAll({
       where: {
-        status: { [Op.in]: ['PENDENTE', 'EM_PREPARO'] }
+        status: { [Op.in]: ['PENDENTE', 'EM_PREPARO', 'PRONTO'] }
       },
       include: [
         {
@@ -30,7 +30,7 @@ module.exports = {
   async getCopa(req, res) {
     const pedidosCopa = await ItemPedido.findAll({
       where: {
-        status: { [Op.in]: ['PENDENTE', 'EM_PREPARO'] }
+        status: { [Op.in]: ['PENDENTE', 'EM_PREPARO', 'PRONTO'] }
       },
       include: [
         {
