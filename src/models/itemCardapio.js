@@ -9,7 +9,7 @@ class ItemCardapio extends Model {
       tipo: DataTypes.ENUM('PRATO', 'BEBIDA'), 
       disponivel: DataTypes.BOOLEAN
     }, { 
-      sequelize, 
+      sequelize,
       tableName: 'produtos', 
       underscored: true 
     });

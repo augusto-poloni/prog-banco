@@ -5,8 +5,14 @@ class Usuario extends Model {
     super.init({
       nome: DataTypes.STRING,
       email: DataTypes.STRING,
-      senha: DataTypes.STRING, 
-    }, { sequelize });
+      senha: DataTypes.STRING,
+
+    }, { 
+      sequelize,
+      tableName: 'usuarios',
+      underscored: true 
+    });
   }
 }
+
 module.exports = Usuario;
